@@ -1,0 +1,236 @@
+*{
+   margin:0%;
+   padding: 0%; 
+   font-family: sans-serif;
+}
+body{
+    min-height: 100vh;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing:border-box;
+    overflow: hidden; 
+}
+.navbar{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    background: linear-gradient(to right,white,tomato,white);
+}
+.logo{
+    width: 50px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+.menu{
+    width: 20px;
+    cursor: pointer;
+    margin-left:50px;
+    display: none;
+    position: absolute;
+    right: 30px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+.col1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+.col1 h2{
+    font-size: 54px;
+}
+.col1 h3{
+    font-size: 30px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+.col1 p{
+    font-size: 16px;
+    color: rgb(114, 111, 111);
+    font-weight: 100;
+}
+.col1 h4{
+    margin: 30px 0px;
+    font-size: 20px;
+}
+button{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: white;
+    background: linear-gradient(to right, red,rgb(245, 141, 159));
+    border-radius: 6px;
+    cursor: pointer;
+    transition:width 0.5s;
+}
+button img{
+    width: 30px;
+    display: none;
+}
+button:hover img{
+    display:block;
+}
+button:hover{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right,rgb(245, 141, 159),red);
+    border-radius: 10px;
+}
+
+.col1::after{
+    content: '';
+    width: 10px;
+    height: 70%;
+    background: linear-gradient( red,green);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+.col2{
+    position: relative;
+    display: flex;
+    flex-basis: 60%;
+    align-items: center;
+}
+.controler{
+    width: 90%;
+}
+.colorbox{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background: linear-gradient(rgb(245, 13, 245),rgb(112, 161, 252));
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 80%;
+    z-index: -1;
+    transform: translateX(150px);
+}
+.addbtn{
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.addbtn img{
+    width: 35px;
+    margin-bottom: 5px;
+}
+.slinks img{
+    height: 13px;
+    margin: 20px;
+    cursor: pointer;
+}
+.slinks{
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    margin: auto;
+}
+
+@media only screen and (max-width:800px){
+    .menu{
+        display: block;
+    }
+    .col1{
+        margin-left: 30px;
+    }
+    .col1 h2{
+        font-size: 30px;
+    }
+    .col1 h3{
+        font-size: 18px;
+        margin: 10px 0 5px;
+    }
+    .col1 p{
+        font-size: 10px;
+        font-weight: 100;
+    }
+    .col1 h4{
+        margin: 10px 0px;
+        font-size: 20px;
+    }
+    .controler{
+        width: 80%;
+    }
+    .colorbox{
+        top: -20px;
+        height: 150%;
+        width: 80%;
+        transform: translateX(50px);
+    }
+    #nav1 ul li{
+        display: block;
+        margin: 10px 0;
+        
+        
+    }
+    #nav1 ul{
+        background: linear-gradient(to right,rgb(108, 194, 228),rgb(151, 69, 69));
+        position: relative;
+        top: 85px;
+        width: 120%;
+        right: 13%;
+        /* height: 100vh; */
+        border-radius: 10px 0 0 10px;
+        padding: 5px;
+        /* margin: 25px 0;  */
+    }
+    #nav1 ul li a{
+        color: white;
+    }
+}
+@media only screen and (max-width:450px){
+    .col1{
+        margin-left: 10px;
+    }
+    .col1 h2{
+        font-size: 5px;
+    }
+    .col1 h3{
+        font-size: 5px;
+        margin: 10px 0 5px;
+    }
+    .col1 p{
+        font-size: 8px;
+        font-weight: 100;
+    }
+    .col1 h4{
+        margin: 10px 0px;
+        font-size: 15px;
+    }
+    .controler{
+        width: 90%;
+    }
+    .colorbox{
+        top: -20px;
+        height: 150%;
+        width: 80%;
+        transform: translateX(30px);
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Web Page</title>
+    <link rel="stylesheet" href="style.css">
+    {{!-- style include --}}
+</head>
+<body>
+    <div class="container">
+        {{>header}}
+    {{>body}}  
+    {{>body}}  
+    {{>body}}  
+    </div>
+    {{>footer}}
+    <script>
+        var nav1 = document.getElementById('nav1');
+        let menu = document.querySelector('#menu');
+        menu.addEventListener('click',hidden);
+        function hidden(){
+            if(nav1.style.display != 'none'){
+                nav1.style.display = 'none';
+            }
+            else{
+                nav1.style.display = 'block';
+                // var list = document.querySelectorAll('li');
+                // list.style.display = 'block';
+            }
+
+        };
+    </script>
+</body>
+</html>
